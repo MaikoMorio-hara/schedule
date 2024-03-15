@@ -1,0 +1,11 @@
+CREATE TABLE `schedules` (
+	`id` SERIAL NOT NULL COMMENT 'ID',
+	`name` VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+	`day` DATE NOT NULL,
+	`title` VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+	`detail` VARCHAR(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+	`updated_at` DATETIME ON UPDATE CURRENT_TIMESTAMP,
+	`deleted_at` DATETIME,
+	`created_at` DATETIME ON UPDATE CURRENT_TIMESTAMP,
+	PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
